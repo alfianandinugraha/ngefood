@@ -1,0 +1,51 @@
+{
+  "plugins": ["prettier"],
+  "extends": [
+    "plugin:prettier/recommended",
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "no-undef": [
+      "error",
+      {
+        "typeof": true
+      }
+    ],
+    "no-extra-boolean-cast": "off",
+    "no-useless-catch": "warn",
+    "no-unsafe-optional-chaining": "warn",
+    "no-empty": "warn",
+    "no-constant-condition": "warn",
+    "import/order": "warn",
+    "eqeqeq": "warn",
+    "prefer-const": "warn",
+    "yoda": "warn"
+  },
+  "ignorePatterns": [
+    "node_modules/*",
+    "!.prettierrc.js",
+    "!.eslintrc.json",
+    "dist/*"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [["@", "./src"]],
+        "extensions": [".ts", ".js", ".json", ".jsx", ".tsx"]
+      }
+    }
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  }
+}
