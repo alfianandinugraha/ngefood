@@ -15,7 +15,7 @@ class Navbar extends HTMLElement {
 
     this.innerHTML = `
       <div class="flex items-center">
-        <div class="text-3xl font-serif text-[#004225] mr-7">
+        <div class="text-xl md:text-3xl font-serif text-[#004225] mr-7">
           <b>Ngefood</b>
         </div>
         <div class="flex gap-5">
